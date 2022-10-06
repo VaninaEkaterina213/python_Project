@@ -1,0 +1,11 @@
+p = 0
+o = 0
+for i in range (15):
+    print ("введите 15 числел")
+    m = int(input())
+    if m>=0:
+        p = p + m 
+    else:
+        o = o + m
+print ("сумма положительных чисел"+" "+ str(p))
+print ("сумма отрицательных чисел"+ " "+ str (o))
