@@ -1,3 +1,4 @@
+I = 1
 p = 0
 o = 0
 for i in range (15):
