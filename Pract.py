@@ -6,8 +6,8 @@ import heapq  # c помощью этого мы можем находить н�
 #функции
 def first_task():
     print ("выберите выражение a-f")
-    a=input()
     print("a) (101+0)/3 ","b) 3.0e-6 * 10000000.1","c) true && true","d) false && true","e) (false && false)|(true && true)","f) (false | false) && (true && true)" ,sep='\n')
+    a = input()
     match a:
         case "a":
             print( (101 + 0) / 3)
