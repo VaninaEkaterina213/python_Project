@@ -1,0 +1,21 @@
+string password = ""; 
+ do 
+ { 
+ Console.WriteLine ("Введите пароль"); 
+ password = Console.ReadLine (); 
+ } 
+ while (password != "12345"); 
+ Console.WriteLine("Пароль верный"); 
+ Console.WriteLine("Введите уровень здоровья"); 
+ string health = Console.ReadLine(); 
+ Console.WriteLine("Введите уровень брони"); 
+ string Armor = Console.ReadLine(); 
+ Random r = new Random(); 
+ int Damage = r.Next(0, 100); 
+ double health1 = Convert.ToDouble(health); 
+ double Armor1 = Convert.ToDouble(Armor); 
+ double Damage1 = Convert.ToDouble(Damage); 
+ Armor1 = Armor1 / 100; 
+ health1 = health1 - (Damage1 * Armor1); 
+ Console.WriteLine($"Здоровья осталось {health1}"); 
+ Console.ReadKey();
