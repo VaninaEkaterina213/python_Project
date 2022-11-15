@@ -1,0 +1,70 @@
+import random
+
+array1 = [random.randint(1,200) for i in range (10)]#nechot
+array2 = [random.randint(1,200) for i in range (10)]#chot
+array3 = []
+for j in range (10):
+    if array1[j]%2 != 0:
+        array3.append(array1[j])
+    if array2[j]%2 == 0:
+        array3.append(array2[j])
+print (array1,array2,array3,sep='\n')
+
+
+array1 = [random.randint(1,200) for i in range (10)]
+print(array1)
+array2=[]
+j=9
+for i in range (10):
+    array2.append(array1[j])
+    j=j-1
+print(array2)
+
+print ('Введите начало диапазона')
+diapoz1 = int(input())
+print ('Введите конец диапазона')
+diapoz2 = int(input())
+for i in range(diapoz1,diapoz2):
+    delitel = 0#счётчик остаток 0
+    for j in range(1, i + 1):
+        if i % j == 0:
+            delitel += 1
+    if delitel <= 2:
+        print(i)
+
+ print("выберите систему счисления исходного числа:2,8,10,16")
+ a13=int(input())
+  match a13:
+    case 2:
+      print("Введите число")
+      b=int(input())
+    case 8:
+      print("Введите число")
+      b=int(input())
+    case 10:
+      print("Введите число")
+      b=int(input())
+    case 16:
+      print("Введите число")
+      b=int(input())
+    case _:
+      print("Прости,брат, не могу посчитать такое")
+  
+print("выберите систему счисления в которую вы хотите перевести число: 2,8,10,16")
+a1=int(input())
+match a1:
+    case 2:
+      match a13:
+          case 2:
+            print("Не могу перевести из 2-ной в 2-ную(((")
+          case 8:
+            oct(b)
+    case 8:
+        choose_num()
+    case 10:
+        choose_num()
+    case 16:
+      choose_num()
+    case _:
+      print("Прости,брат, не могу посчитать такое")
+
