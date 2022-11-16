@@ -32,39 +32,48 @@ for i in range(diapoz1,diapoz2):
     if delitel <= 2:
         print(i)
 
- print("выберите систему счисления исходного числа:2,8,10,16")
- a13=int(input())
-  match a13:
-    case 2:
-      print("Введите число")
-      b=int(input())
-    case 8:
-      print("Введите число")
-      b=int(input())
-    case 10:
-      print("Введите число")
-      b=int(input())
-    case 16:
-      print("Введите число")
-      b=int(input())
-    case _:
-      print("Прости,брат, не могу посчитать такое")
-  
-print("выберите систему счисления в которую вы хотите перевести число: 2,8,10,16")
-a1=int(input())
-match a1:
-    case 2:
-      match a13:
-          case 2:
-            print("Не могу перевести из 2-ной в 2-ную(((")
-          case 8:
-            oct(b)
-    case 8:
-        choose_num()
-    case 10:
-        choose_num()
-    case 16:
-      choose_num()
-    case _:
-      print("Прости,брат, не могу посчитать такое")
-
+a11 = input('Введите число ')
+b11 = int(input('Введите основание системы счисления '))
+s = int(input('Введите систему исчисления для перевода '))
+  match s: 
+     case 2:
+       match b11:
+        case 2:
+          print(b11)
+        case 8:
+          oct(b11)
+        case 10:
+          print(int(a11, b11))
+        case 16:
+          hex(b11)
+     case 8:
+      match b11:
+        case 2:
+          bin(b11)
+        case 8:
+           print(b11)
+        case 10:
+          print(int(a11, b11))
+        case 16:
+          hex(b11)
+     case 10:
+      match b11:
+        case 2:
+          bin(b11)
+        case 8:
+           oct(b11)
+        case 10:
+          print(b11)
+        case 16:
+          hex(b11)
+       
+     case 16:
+       match b:
+        case 2:
+          bin(b11)
+        case 8:
+           oct(b11)
+        case 10:
+          print(int(a11, b11))
+        case 16:
+          print( b11)
