@@ -36,50 +36,50 @@ def third():
             print(i)
 
 def task_4():
-    a11 = input('Введите число ')
-    b11 = int(input('Введите основание системы счисления '))
-    s = int(input('Введите систему исчисления для перевода '))
-    match s: 
+    num = input('Введите число ')
+    base = int(input('Введите основание системы счисления '))
+    sys= int(input('Введите систему исчисления для перевода '))
+    match sys: 
      case 2:
-      match b11:
+      match base:
         case 2:
-           print(b11)
+           print(base)
         case 8:
-           oct(b11)
+           bin(num)
         case 10:
-           print(int(a11, b11))
+           bin(num)
         case 16:
-           hex(b11)
+           bin(num)
      case 8:
-      match b11:
+      match base:
         case 2:
-           bin(b11)
+           oct(base)
         case 8:
-           print(b11)
+           print(base)
         case 10:
-           print(int(a11, b11))
+           oct(base)
         case 16:
-           hex(b11)
+           oct(base)
      case 10:
-       match b11:
+       match base:
         case 2:
-           bin(b11)
+           print(int(num, base))
         case 8:
-           oct(b11)
+          print(int(num, base))
         case 10:
-           print(b11)
+           print(base)
         case 16:
-           hex(b11)
+           print(int(num, base))
      case 16:
-       match b11:
+       match base:
         case 2:
-           bin(b11)
+           hex(base)
         case 8:
-           oct(b11)
+           hex(base)
         case 10:
-           print(int(a11, b11))
+           hex(base)
         case 16:
-           print( b11)
+           print( base)
 
 def task_5()
     import random
