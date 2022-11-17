@@ -71,7 +71,7 @@ def task_4():
         case 16:
            hex(b11)
      case 16:
-       match b:
+       match b11:
         case 2:
            bin(b11)
         case 8:
@@ -80,3 +80,11 @@ def task_4():
            print(int(a11, b11))
         case 16:
            print( b11)
+
+def task_5()
+    import random
+    array = set([3,5,5,6,7,8,9,5])#set -это множество
+    array2 =set([3,5,5,4,6,3,54,4])
+    print("Первый список "+ str(array))
+    print("Второй список "+ str(array2))
+    print(array-array2)#здесь в результате сравнения он выведет элементы из 1 списка, которых нет во 2
