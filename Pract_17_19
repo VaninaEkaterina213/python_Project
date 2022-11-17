@@ -88,3 +88,10 @@ def task_5()
     print("Первый список "+ str(array))
     print("Второй список "+ str(array2))
     print(array-array2)#здесь в результате сравнения он выведет элементы из 1 списка, которых нет во 2
+    
+def task_6():
+    str_list = input('Введите числа через запятую: ')
+    razdel = str_list.split(',')#split- устанавливавет разделитель между элементами
+    int_list = map(int, razdel)#map- переписывает каждый элемент строки в число 
+    list_fin = list(razdel)# запись элементов в список 
+    print('Список:', list_fin)
