@@ -95,3 +95,13 @@ def task_6():
     int_list = map(int, razdel)#map- переписывает каждый элемент строки в число 
     list_fin = list(razdel)# запись элементов в список 
     print('Список:', list_fin)
+
+def task_7():
+    print('Введите элементы массива ')
+    a = [int(input()) 
+        for j in range(10)]
+    check = set(a)
+    if len(a)==len(check):
+        print('Элементы уникальны :>') 
+    else:
+        print('Есть повторы :< ')
