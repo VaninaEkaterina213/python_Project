@@ -1,6 +1,6 @@
 import random
 
-def first():
+def e:
     array1 = [random.randint(1,200) for i in range (10)]#nechot
     array2 = [random.randint(1,200) for i in range (10)]#chot
     array3 = []
@@ -129,3 +129,106 @@ def task_9():
          sant= dum*2.54
          print(str(dum)+"дюймов- это"+str(sant)+"сантиметров")
          
+  def task_10():
+    print("выберите: d-день,h-часы, m-минуты, s-секунды")
+    choose = input()
+    match choose:
+      case "d":
+        print("Во что перевести?")
+        choose_double=input()
+        mach choose_double:
+          case "h":
+            print("введите число ")
+            s= int(input())
+            s_new=s/24
+            print(s_new+ "дней")
+          case "m":
+            print("введите число ")
+            s= int(input())
+            s_new=s*1440
+            print(s_new+ "минут")
+          case "s":
+            print("введите число ")
+            s= int(input())
+            s_new=s*86400
+            print(s_new+ "секунд")
+      case "h":
+        print("Во что перевести?")
+        choose_double=input()
+        mach choose_double:
+          case "d":
+            print("введите число ")
+            s= int(input())
+            s_new=s/24
+            print(s_new+ "дней")
+          case "m":
+            print("введите число ")
+            s= int(input())
+            s_new=s*60
+            print(s_new+ "минут")
+          case "s":
+            print("введите число ")
+            s= int(input())
+            s_new=s*3600
+            print(s_new+ "секунд")
+      case "m":
+        print("Во что перевести?")
+        choose_double=input()
+        mach choose_double:
+          case "d":
+            print("введите число ")
+            s= int(input())
+            s_new=s*1440
+            print(s_new+ "дней")
+          case "h":
+            print("введите число ")
+            s= int(input())
+            s_new=s*60
+            print(s_new+ "минут")
+          case "s":
+            print("введите число ")
+            s= int(input())
+            s_new=s/60
+            print(s_new+ "секунд")
+      case "s":
+        print("Во что перевести?")
+        choose_double=input()
+        mach choose_double:
+          case "d":
+            print("введите число ")
+            s= int(input())
+            s_new=s*86400
+            print(s_new+ "дней")
+          case "h":
+            print("введите число ")
+            s= int(input())
+            s_new=s*3600
+            print(s_new+ "минут")
+          case "m":
+            print("введите число ")
+            s= int(input())
+            s_new=s*60
+            print(s_new+ "секунд")
+print("Выберите задание")
+task=int(input())
+mach task:
+    case 1:
+        first()
+    case 2:
+        second()
+    case 3:
+        third()
+    case 4:
+        task_4()
+    case 5:
+        task_5()
+    case 6:
+        task_6()
+    case 7:
+        task_7()
+    case 8:
+        task_8()
+    case 9:
+        task_9()
+    case 10:
+        task_10()
