@@ -105,3 +105,11 @@ def task_7():
         print('Элементы уникальны :>') 
     else:
         print('Есть повторы :< ')
+
+def task_8():
+    print("введите число")
+    chisl=int(input())
+    if chisl%2==0:
+        print('Число чётное')
+    else:
+        print("Число не чётное")
