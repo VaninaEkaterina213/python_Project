@@ -113,3 +113,19 @@ def task_8():
         print('Число чётное')
     else:
         print("Число не чётное")
+
+def task_9():
+    print("выберите в чём считать высоту: f- в футах , d- в дюймах")
+    act=input()
+    match act:
+        case "f":
+         print("Введите высоту ")
+         fut= double(input())
+         sant= fut/30.48
+         print(str(fut)+"футов- это"+str(sant)+"сантиметров")
+        case "d":
+         print("Введите высоту ")
+         dum= double(input())
+         sant= dum*2.54
+         print(str(dum)+"дюймов- это"+str(sant)+"сантиметров")
+         
