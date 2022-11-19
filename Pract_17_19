@@ -1,217 +1,227 @@
 import random
 
-def e:
-    array1 = [random.randint(1,200) for i in range (10)]#nechot
-    array2 = [random.randint(1,200) for i in range (10)]#chot
+
+def first(): # 1 список с нечётными 2 список с чётными
+    array1 = [random.randint(1, 200) for i in range(10)]  # nechot
+    array2 = [random.randint(1, 200) for i in range(10)]  # chot
     array3 = []
-    for j in range (10):
-        if array1[j]%2 != 0:
+    for j in range(10):
+        if array1[j] % 2 != 0:
             array3.append(array1[j])
-        if array2[j]%2 == 0:
+        if array2[j] % 2 == 0:
             array3.append(array2[j])
-    print (array1,array2,array3,sep='\n')
+    print(array1, array2, array3, sep='\n')
 
 
-def second():
-    array1 = [random.randint(1,200) for i in range (10)]
+def second(): #массив в обратном порядке
+    array1 = [random.randint(1, 200) for i in range(10)]
     print(array1)
-    array2=[]
-    j=9
-    for i in range (10):
+    array2 = []
+    j = 9
+    for i in range(10):
         array2.append(array1[j])
-        j=j-1
+        j = j - 1
     print(array2)
 
-def third():
-    print ('Введите начало диапазона')
+
+def third(): #выводит простые числа из диапозона
+    print('Введите начало диапазона')
     diapoz1 = int(input())
-    print ('Введите конец диапазона')
+    print('Введите конец диапазона')
     diapoz2 = int(input())
-    for i in range(diapoz1,diapoz2):
-        delitel = 0#счётчик остаток 0
+    for i in range(diapoz1, diapoz2):
+        delitel = 0  # счётчик остаток 0
         for j in range(1, i + 1):
             if i % j == 0:
                 delitel += 1
         if delitel <= 2:
             print(i)
 
-def task_4():
+
+def task_4():# из 1 сс в другую
     num = input('Введите число ')
     base = int(input('Введите основание системы счисления '))
-    sys= int(input('Введите систему исчисления для перевода '))
-    match sys: 
-     case 2:
-      match base:
+    sys = int(input('Введите систему исчисления для перевода '))
+    match sys:
         case 2:
-           print(base)
+            match base:
+                case 2:
+                    print(num)
+                case 8:
+                    bin(int(num))
+                case 10:
+                    bin(int(num))
+                case 16:
+                    bin(int(num))
         case 8:
-           bin(num)
+            match base:
+                case 2:
+                    oct(int(num))
+                case 8:
+                    print(int(num))
+                case 10:
+                    oct(int(num))
+                case 16:
+                    oct(int(num))
         case 10:
-           bin(num)
+            match base:
+                case 2:
+                    print(int(num, base))
+                case 8:
+                    print(int(num, base))
+                case 10:
+                    print(int(num))
+                case 16:
+                    print(int(num, base))
         case 16:
-           bin(num)
-     case 8:
-      match base:
-        case 2:
-           oct(base)
-        case 8:
-           print(base)
-        case 10:
-           oct(base)
-        case 16:
-           oct(base)
-     case 10:
-       match base:
-        case 2:
-           print(int(num, base))
-        case 8:
-          print(int(num, base))
-        case 10:
-           print(base)
-        case 16:
-           print(int(num, base))
-     case 16:
-       match base:
-        case 2:
-           hex(base)
-        case 8:
-           hex(base)
-        case 10:
-           hex(base)
-        case 16:
-           print( base)
+            match base:
+                case 2:
+                    hex(int(num))
+                case 8:
+                    hex(int(num))
+                case 10:
+                    hex(int(num))
+                case 16:
+                    print(int(num))
 
-def task_5()
+
+def task_5():
     import random
-    array = set([3,5,5,6,7,8,9,5])#set -это множество
-    array2 =set([3,5,5,4,6,3,54,4])
-    print("Первый список "+ str(array))
-    print("Второй список "+ str(array2))
-    print(array-array2)#здесь в результате сравнения он выведет элементы из 1 списка, которых нет во 2
-    
+    array = set([3, 5, 5, 6, 7, 8, 9, 5])  # set -это множество
+    array2 = set([3, 5, 5, 4, 6, 3, 54, 4])
+    print("Первый список " + str(array))
+    print("Второй список " + str(array2))
+    print(array - array2)  # здесь в результате сравнения он выведет элементы из 1 списка, которых нет во 2
+
+
 def task_6():
     str_list = input('Введите числа через запятую: ')
-    razdel = str_list.split(',')#split- устанавливавет разделитель между элементами
-    int_list = map(int, razdel)#map- переписывает каждый элемент строки в число 
-    list_fin = list(razdel)# запись элементов в список 
+    razdel = str_list.split(',')  # split- устанавливавет разделитель между элементами
+    int_list = map(int, razdel)  # map- переписывает каждый элемент строки в число
+    list_fin = list(razdel)  # запись элементов в список
     print('Список:', list_fin)
 
-def task_7():
+
+def task_7():#проверка на повторы в массиве
     print('Введите элементы массива ')
-    a = [int(input()) 
-        for j in range(10)]
+    a = [int(input())
+         for j in range(10)]
     check = set(a)
-    if len(a)==len(check):
-        print('Элементы уникальны :>') 
+    if len(a) == len(check):
+        print('Элементы уникальны :>')
     else:
         print('Есть повторы :< ')
 
+
 def task_8():
     print("введите число")
-    chisl=int(input())
-    if chisl%2==0:
+    chisl = int(input())
+    if chisl % 2 == 0:
         print('Число чётное')
     else:
         print("Число не чётное")
 
+
 def task_9():
     print("выберите в чём считать высоту: f- в футах , d- в дюймах")
-    act=input()
+    act = input()
     match act:
         case "f":
-         print("Введите высоту ")
-         fut= double(input())
-         sant= fut/30.48
-         print(str(fut)+"футов- это"+str(sant)+"сантиметров")
+            print("Введите высоту ")
+            fut = float(input())
+            sant = fut / 30.48
+            print(str(fut) + "футов- это" + str(sant) + "сантиметров")
         case "d":
-         print("Введите высоту ")
-         dum= double(input())
-         sant= dum*2.54
-         print(str(dum)+"дюймов- это"+str(sant)+"сантиметров")
-         
-  def task_10():
+            print("Введите высоту ")
+            dum = float(input())
+            sant = dum * 2.54
+            print(str(dum) + "дюймов- это" + str(sant) + "сантиметров")
+
+
+def task_10():
     print("выберите: d-день,h-часы, m-минуты, s-секунды")
     choose = input()
     match choose:
-      case "d":
-        print("Во что перевести?")
-        choose_double=input()
-        mach choose_double:
-          case "h":
-            print("введите число ")
-            s= int(input())
-            s_new=s/24
-            print(s_new+ "дней")
-          case "m":
-            print("введите число ")
-            s= int(input())
-            s_new=s*1440
-            print(s_new+ "минут")
-          case "s":
-            print("введите число ")
-            s= int(input())
-            s_new=s*86400
-            print(s_new+ "секунд")
-      case "h":
-        print("Во что перевести?")
-        choose_double=input()
-        mach choose_double:
-          case "d":
-            print("введите число ")
-            s= int(input())
-            s_new=s/24
-            print(s_new+ "дней")
-          case "m":
-            print("введите число ")
-            s= int(input())
-            s_new=s*60
-            print(s_new+ "минут")
-          case "s":
-            print("введите число ")
-            s= int(input())
-            s_new=s*3600
-            print(s_new+ "секунд")
-      case "m":
-        print("Во что перевести?")
-        choose_double=input()
-        mach choose_double:
-          case "d":
-            print("введите число ")
-            s= int(input())
-            s_new=s*1440
-            print(s_new+ "дней")
-          case "h":
-            print("введите число ")
-            s= int(input())
-            s_new=s*60
-            print(s_new+ "минут")
-          case "s":
-            print("введите число ")
-            s= int(input())
-            s_new=s/60
-            print(s_new+ "секунд")
-      case "s":
-        print("Во что перевести?")
-        choose_double=input()
-        mach choose_double:
-          case "d":
-            print("введите число ")
-            s= int(input())
-            s_new=s*86400
-            print(s_new+ "дней")
-          case "h":
-            print("введите число ")
-            s= int(input())
-            s_new=s*3600
-            print(s_new+ "минут")
-          case "m":
-            print("введите число ")
-            s= int(input())
-            s_new=s*60
-            print(s_new+ "секунд")
+        case "d":
+            print("Во что перевести?")
+            choose_double = input()
+            match choose_double:
+                case "h":
+                    print("введите число ")
+                    s = int(input())
+                    s_new = s / 24
+                    print(s_new + "дней")
+
+                case "m":
+                    print("введите число ")
+                    s = int(input())
+                    s_new = s * 1440
+                    print(s_new + "минут")
+                case "s":
+                    print("введите число ")
+                    s = int(input())
+                    s_new = s * 86400
+                    print(s_new + "секунд")
+        case "h":
+            print("Во что перевести?")
+            choose_double = input()
+            match choose_double:
+                case "d":
+                    print("введите число ")
+                    s = int(input())
+                    s_new = s / 24
+                    print(s_new + "дней")
+                case "m":
+                    print("введите число ")
+                    s = int(input())
+                    s_new = s * 60
+                    print(s_new + "минут")
+                case "s":
+                    print("введите число ")
+                    s = int(input())
+                    s_new = s * 3600
+                    print(s_new + "секунд")
+        case "m":
+            print("Во что перевести?")
+            choose_double = input()
+            match choose_double:
+                case "d":
+                    print("введите число ")
+                    s = int(input())
+                    s_new = s * 1440
+                    print(s_new + "дней")
+                case "h":
+                    print("введите число ")
+                    s = int(input())
+                    s_new = s * 60
+                    print(s_new + "минут")
+                case "s":
+                    print("введите число ")
+                    s = int(input())
+                    s_new = s / 60
+                    print(s_new + "секунд")
+        case "s":
+            print("Во что перевести?")
+            choose_double = input()
+            match choose_double:
+                case "d":
+                    print("введите число ")
+                    s = int(input())
+                    s_new = s * 86400
+                    print(s_new + "дней")
+                case "h":
+                    print("введите число ")
+                    s = int(input())
+                    s_new = s * 3600
+                    print(s_new + "минут")
+                case "m":
+                    print("введите число ")
+                    s = int(input())
+                    s_new = s * 60
+                    print(s_new + "секунд")
 print("Выберите задание")
-task=int(input())
-mach task:
+task = int(input())
+match task:
     case 1:
         first()
     case 2:
@@ -232,3 +242,4 @@ mach task:
         task_9()
     case 10:
         task_10()
+
