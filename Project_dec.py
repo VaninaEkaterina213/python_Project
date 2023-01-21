@@ -30,17 +30,17 @@ def razshifr(s):
     #f2= open('key.txt', 'r')
     #print(f2.read())#
     with open("key.txt") as f2:
-    stroka_from_key=(f2.read())
-    p2=list(stroka_from_key)
-    print(p2)
-    s2=list(s)
-    ss=[]
-    pp=[]
-    for s in range(5):
-        ss.append(int(s2[s]))
-        pp.append(int(p2[s]))
-    print(ss)
-    print(pp)
+        stroka_from_key=(f2.read())
+        p2=list(stroka_from_key)
+        print(p2)
+        s2=list(s)
+        ss=[]
+        pp=[]
+        for s in range(5):
+            ss.append(int(s2[s]))
+            pp.append(int(p2[s]))
+        print(ss)
+        print(pp)
     #получить ключ 1-отксорить, 2-разделить и сравнить по алфавиту
 
 
